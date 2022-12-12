@@ -83,7 +83,7 @@ export default {
 
 header {
   padding: 10px 0;
-  background-color: white;
+  background-color: $secondaryColor;
   position: sticky;
   top: 0;
 

@@ -71,7 +71,7 @@ export default {
             }
 
             & a {
-                color: white;
+                color: $secondaryColor;
                 text-decoration: none;
                 padding: 0 10px;
                 font-size: 13px;

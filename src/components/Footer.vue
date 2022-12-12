@@ -218,7 +218,7 @@ export default {
         padding: 30px 0;
 
         & h3 {
-            color: white;
+            color: $secondaryColor;
             padding: 15px 0;
         }
 
@@ -250,7 +250,7 @@ export default {
     z-index: 20;
 
     & button {
-        color: white;
+        color: $secondaryColor;
         background-color: #303030;
         box-shadow: none;
         border: $primaryColor 2px solid;
