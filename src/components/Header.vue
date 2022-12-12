@@ -1,15 +1,18 @@
 <script >
 export default {
+  name: 'Header',
   data() {
     return {
-      na
+
     }
   }
 }
 </script>
 
 <template>
- 
+  <header>
+    <h1>bsdbsbsbbssssssss</h1>
+  </header>
 </template>
 
 <style lang="scss" scoped>

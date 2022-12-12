@@ -1,6 +1,8 @@
 <script >
 import Header from './components/Header.vue'
+
 export default {
+  name: 'App',
   components: {
     Header,
 
@@ -11,7 +13,7 @@ export default {
 <template>
 <font-awesome-icon icon="fa-solid fa-user" />
   
-  <HelloWorld />
+  <Header />
 </template>
 
 <style lang="scss" scoped>
