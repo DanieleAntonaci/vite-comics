@@ -80,12 +80,14 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  margin: 20px 0;
+  margin: 10px 0;
   position: sticky;
 
 
   & .container {
-
+    & img {
+      height: 80px;
+    }
 
     ul {
       display: flex;
@@ -98,13 +100,13 @@ header {
           text-decoration: none;
           font-weight: 600;
           font-size: 14px;
-
+          padding-bottom: 37px;
         }
 
         & :hover,
-        &.active {
-          color: blue;
-          margin-bottom: 2px solid blue;
+        & .active {
+          color: #0282f9;
+          border-bottom: 5px solid #0282f9;
         }
       }
     }
