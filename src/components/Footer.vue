@@ -28,6 +28,85 @@ export default {
                     img: '/img/buy-dc-power-visa.svg',
                     link: '#'
                 },
+            ],
+            footerElement: [
+
+                {
+                    title: 'DC COMICS',
+                    listLink: [
+                        {
+                            text: 'Characters',
+                            url: '#',
+                            activeElement: true
+                        },
+                        {
+                            text: 'Comics',
+                            url: '#',
+                            activeElement: false
+                        },
+                        {
+                            text: 'Movies',
+                            url: '#',
+                            activeElement: false
+                        },
+                        {
+                            text: 'TV',
+                            url: '#',
+                            activeElement: false
+                        },
+                        {
+                            text: 'Games',
+                            url: '#',
+                            activeElement: false
+                        },
+                        {
+                            text: 'Videos',
+                            url: '#',
+                            activeElement: false
+                        },
+                        {
+                            text: 'News',
+                            url: '#',
+                            activeElement: false
+                        },
+                    ]
+                }, {
+                    title: 'SHOP',
+                    listLink: [
+                        {
+                            text: 'Shop DC',
+                            url: '#'
+                        },
+                        {
+                            text: 'Shop DC Collectivles',
+                            url: '#'
+                        },
+                    ]
+                }, {
+                    title: 'DC',
+                    listLink: [
+                        {
+                            text: 'Shop DC',
+                            url: '#'
+                        },
+                        {
+                            text: 'Shop DC Collectivles',
+                            url: '#'
+                        },
+                    ]
+                }, {
+                    title: 'SITES',
+                    listLink: [
+                        {
+                            text: 'Shop DC',
+                            url: '#'
+                        },
+                        {
+                            text: 'Shop DC Collectivles',
+                            url: '#'
+                        },
+                    ]
+                }
             ]
         }
     }
@@ -45,11 +124,19 @@ export default {
     </section>
 
     <section id="navSection">
-        <div>
-            <h3>DC COMICS</h3>
-            <ul>
-    
-            </ul>
+        <div class="container">
+            <div class="linkFooter">
+                <div v-for="element in footerElement">
+                    <h3>{{ element.title }}</h3>
+                    <ul>
+                        <li v-for="link in element.listLink">
+                            <a :href="link.url">
+                                {{ link.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -89,5 +176,21 @@ export default {
 
 #navSection {
     background-image: url('/img/footer-bg.jpg');
+    padding: 40px 0;
+
+    & h3 {
+        color: white;
+
+    }
+
+    & .linkFooter {}
+
+    & ul li a {
+        color: rgb(150, 150, 150);
+        font-size: 15px;
+        text-decoration: none;
+        line-height: 23px;
+    }
+
 }
 </style>
