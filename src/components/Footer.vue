@@ -1,34 +1,13 @@
 <script>
+import Merchandise from './Merchandise.vue'
+
 export default {
+    components: {
+        Merchandise
+    },
     data() {
         return {
-            merchandiseElements: [
-                {
-                    text: "DICITAL COMICS",
-                    img: '/img/buy-comics-digital-comics.png',
-                    link: '#'
-                },
-                {
-                    text: "DC MERCHANDISE",
-                    img: '/img/buy-comics-merchandise.png',
-                    link: '#'
-                },
-                {
-                    text: "SUBSCRIPTON",
-                    img: '/img/buy-comics-shop-locator.png',
-                    link: '#'
-                },
-                {
-                    text: "COMIC SHOP LOCATOR",
-                    img: '/img/buy-comics-subscriptions.png',
-                    link: '#'
-                },
-                {
-                    text: "DC POWER VISA",
-                    img: '/img/buy-dc-power-visa.svg',
-                    link: '#'
-                },
-            ],
+
             footerElement: [
 
                 {
@@ -180,15 +159,10 @@ export default {
 </script>
 
 <template>
-    <section id="merchandise">
-            <ul class="container">
-                <li v-for="(element, index) in merchandiseElements" :key="index">
-                    <img :src="element.img" alt="">
-                    <a :href="element.link">{{ element.text }}</a>
-                </li>
-            </ul>
-    </section>
+ 
+    <Merchandise/>
 
+    
     <section id="navSection">
         <div class="container">
             <div class="linkFooter">
@@ -228,37 +202,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-#merchandise {
-    background-color: #0282f9;
-
-
-    & ul {
-        display: flex;
-        align-items: center;
-        padding: 40px 0;
-
-
-
-        & li {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-
-            & img {
-                height: 50px;
-            }
-
-            & a {
-                color: white;
-                text-decoration: none;
-                padding: 0 10px;
-                font-size: 13px;
-            }
-        }
-    }
-}
-
 #navSection {
     background-image: url('/img/footer-bg.jpg');
     padding: 0;
