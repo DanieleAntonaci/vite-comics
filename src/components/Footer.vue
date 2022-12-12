@@ -159,45 +159,62 @@ export default {
 </script>
 
 <template>
- 
+    <!-- modulo linea blu/ merchandise -->
     <Merchandise/>
 
 
     <section id="navSection">
         <div class="container">
             <div class="linkFooter">
+
                 <div v-for="element in footerElement">
+
                     <h3>{{ element.title }}</h3>
+
                     <ul>
+
                         <li v-for="link in element.listLink">
                             <a :href="link.url">
                                 {{ link.text }}
                             </a>
                         </li>
+
                     </ul>
+
                 </div>
+
             </div>
 
             <div class="img-footer">
+
                 <img src="/img/dc-logo-bg.png" alt="">
+
             </div>
+
         </div>
 
     </section>
 
     <section id="footerSocial">
+
         <div class="container">
+
             <button>
                 SIGN-UP NOW!
             </button>
+
             <div>
+
                 <h3>FOLLOW US</h3>
+                
                 <a  v-for="img in imgSocial"  :href="img.link">
                     <img :src="img.img" alt="Social icon">
                 </a>
             
             </div>
+
         </div>
+
     </section>
 </template>
 

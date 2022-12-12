@@ -36,14 +36,18 @@ export default {
 </script>
 
 <template>
+
        <section id="merchandise">
             <ul class="container">
+
                 <li v-for="(element, index) in merchandiseElements" :key="index">
                     <img :src="element.img" alt="">
                     <a :href="element.link">{{ element.text }}</a>
                 </li>
+                
             </ul>
     </section>
+
 </template>
 
 <style lang="scss" scoped>

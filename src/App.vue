@@ -36,10 +36,11 @@ export default {
 }
 
 main {
-  background-color: black;
-  height: 100px;
+  background-image: url('img/jumbotron.jpg');
+  background-size: cover;
+  height: 300px;
   width: 100%;
-  color: white;
+  color: $secondaryColor;
 }
 </style>
  

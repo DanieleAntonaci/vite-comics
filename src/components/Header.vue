@@ -65,15 +65,20 @@ export default {
     <div class="container">
 
       <img src="/img/dc-logo.png" alt="Logo DC">
+
+
       <nav>
         <ul>
+
           <li  v-for="(element, index) in informationNavBar" :key="index">
             <a :class="{ active: element.activeElement }" :href="element.link">
               {{ element.text }}
             </a>
           </li>
+          
         </ul>
       </nav>
+
     </div>
   </header>
 </template>
