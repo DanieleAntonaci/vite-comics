@@ -11,10 +11,47 @@ export default {
 
 <template>
   <header>
-    <h1>bsdbsbsbbssssssss</h1>
+    <img src="/img/dc-logo.png" alt="Logo DC">
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+        <li>
+          <a href="#">Caracter</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
 <style lang="scss" scoped>
+header {
+  display: flex;
+  justify-content: space-between;
 
+  ul {
+    display: flex;
+
+    & li {
+      padding: 0 10px;
+
+    }
+  }
+}
 </style>
