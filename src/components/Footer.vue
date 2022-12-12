@@ -162,7 +162,7 @@ export default {
  
     <Merchandise/>
 
-    
+
     <section id="navSection">
         <div class="container">
             <div class="linkFooter">
@@ -202,6 +202,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 #navSection {
     background-image: url('/img/footer-bg.jpg');
     padding: 0;
@@ -251,7 +253,7 @@ export default {
         color: white;
         background-color: #303030;
         box-shadow: none;
-        border: #0282f9 2px solid;
+        border: $primaryColor 2px solid;
         padding: 15px 20px;
         font-size: 16px;
     }
@@ -261,7 +263,7 @@ export default {
         align-items: center;
 
         & h3 {
-            color: #0282f9;
+            color: $primaryColor;
         }
 
         & a {

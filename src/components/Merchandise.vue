@@ -47,8 +47,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 #merchandise {
-    background-color: #0282f9;
+    background-color: $primaryColor;
 
 
     & ul {

@@ -79,9 +79,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
 header {
-  margin: 10px 0;
+  padding: 10px 0;
+  background-color: white;
   position: sticky;
+  top: 0;
 
 
   & .container {
@@ -105,8 +109,8 @@ header {
 
         & :hover,
         & .active {
-          color: #0282f9;
-          border-bottom: 5px solid #0282f9;
+          color: $primaryColor;
+          border-bottom: 5px solid $primaryColor;
         }
       }
     }
