@@ -1,11 +1,12 @@
 <script >
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-
+    Footer
   }
 }
 </script>
@@ -13,8 +14,14 @@ export default {
 <template>
   <Header/>
   <main>
+   <div class="container">
+    <h2>
+    -->Content goes here 
 
+    </h2>
+   </div>
   </main>
+
 </template>
 
 <style lang="scss">
@@ -22,10 +29,17 @@ export default {
 @use './style/partials/variables' as *;
 @use './style/partials/mixin' as *;
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 main {
   background-color: black;
   height: 100px;
   width: 100%;
+  color: white;
 }
 </style>
  
