@@ -3,7 +3,12 @@ export default {
   name: 'Header',
   data() {
     return {
-
+      informationNavBar: [
+        {
+          name: 'CHARACTERS',
+          activeElement: false
+        },
+      ]
     }
   }
 }
@@ -42,8 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  display: flex;
-  justify-content: space-between;
+  @include center();
 
   ul {
     display: flex;

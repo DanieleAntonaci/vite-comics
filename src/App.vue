@@ -15,7 +15,7 @@ export default {
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use './style/general.scss' as *;
 @use './style/partials/variables' as *;
 </style>
