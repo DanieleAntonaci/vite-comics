@@ -5,7 +5,53 @@ export default {
     return {
       informationNavBar: [
         {
-          name: 'CHARACTERS',
+          text: 'CHARACTERS',
+          url: '#',
+          activeElement: true
+        },
+        {
+          text: 'COMICS',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'MOVIES',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'TV',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'GAMES',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'COLLECTIBLES',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'VIDEOS',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'FANS',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'NEWS',
+          url: '#',
+          activeElement: false
+        },
+        {
+          text: 'SHOP',
+          url: '#',
           activeElement: false
         },
       ]
@@ -16,45 +62,51 @@ export default {
 
 <template>
   <header>
-    <img src="/img/dc-logo.png" alt="Logo DC">
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-        <li>
-          <a href="#">Caracter</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container">
+
+      <img src="/img/dc-logo.png" alt="Logo DC">
+      <nav>
+        <ul>
+          <li  v-for="(element, index) in informationNavBar" :key="index">
+            <a :class="{ active: element.activeElement }" :href="element.link">
+              {{ element.text }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-  @include center();
+  margin: 20px 0;
+  position: sticky;
 
-  ul {
+
+  & .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    & li {
-      padding: 0 10px;
+    ul {
+      display: flex;
 
+      & li {
+        padding: 0 10px;
+
+        & a {
+          color: black;
+          text-decoration: none;
+
+        }
+
+        & :hover,
+        &.active {
+          color: blue;
+          margin-bottom: 2px solid blue;
+        }
+      }
     }
   }
 }
