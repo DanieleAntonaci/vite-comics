@@ -21,7 +21,7 @@ export default {
     </h2>
    </div>
   </main>
-
+  <Footer />
 </template>
 
 <style lang="scss">
