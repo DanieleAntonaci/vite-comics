@@ -85,6 +85,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+@use '../style/partials/mixin' as *;
 
 header {
   padding: 10px 0;
@@ -99,7 +100,7 @@ header {
     }
 
     ul {
-      display: flex;
+      @include center('onlyFlex');
 
       & li {
         padding: 0 10px;

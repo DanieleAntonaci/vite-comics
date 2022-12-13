@@ -220,6 +220,7 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+@use '../style/partials/mixin' as *;
 
 #navSection {
     background-image: url('/img/footer-bg.jpg');
@@ -228,8 +229,8 @@ export default {
 
 
     & .linkFooter {
+        @include center('onlyFlex');
         height: 400px;
-        display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 30px 0;
@@ -276,8 +277,7 @@ export default {
     }
 
     & div {
-        display: flex;
-        align-items: center;
+        @include center('horizontal');
 
         & h3 {
             color: $primaryColor;

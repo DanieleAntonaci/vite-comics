@@ -52,21 +52,20 @@ export default {
 
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
+@use '../style/partials/mixin' as *;
 
 #merchandise {
     background-color: $primaryColor;
 
 
     & ul {
-        display: flex;
-        align-items: center;
+        @include center('horizontal');
         padding: 40px 0;
 
 
 
         & li {
-            display: flex;
-            align-items: center;
+            @include center('horizontal');
             justify-content: space-between;
 
 
