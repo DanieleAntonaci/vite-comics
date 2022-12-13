@@ -94,18 +94,18 @@ header {
   top: 0;
 
 
-  & .container {
-    & img {
+  .container {
+    img {
       height: 80px;
     }
 
     ul {
       @include center('onlyFlex');
 
-      & li {
+      li {
         padding: 0 10px;
 
-        & a {
+        a {
           color: black;
           text-decoration: none;
           font-weight: 600;

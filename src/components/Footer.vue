@@ -15,38 +15,31 @@ export default {
                     listLink: [
                         {
                             text: 'Characters',
-                            url: '#',
-                            activeElement: true
+                            url: '#'
                         },
                         {
                             text: 'Comics',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                         {
                             text: 'Movies',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                         {
                             text: 'TV',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                         {
                             text: 'Games',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                         {
                             text: 'Videos',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                         {
                             text: 'News',
-                            url: '#',
-                            activeElement: false
+                            url: '#'
                         },
                     ]
                 }, {
@@ -267,7 +260,7 @@ export default {
     padding: 20px;
     z-index: 20;
 
-    & button {
+    button {
         color: $secondaryColor;
         background-color: #303030;
         box-shadow: none;
@@ -276,14 +269,14 @@ export default {
         font-size: 16px;
     }
 
-    & div {
+    div {
         @include center('horizontal');
 
-        & h3 {
+        h3 {
             color: $primaryColor;
         }
 
-        & a {
+        a {
             padding-left: 15px;
         }
     }

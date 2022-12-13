@@ -58,22 +58,22 @@ export default {
     background-color: $primaryColor;
 
 
-    & ul {
+    ul {
         @include center('horizontal');
         padding: 40px 0;
 
 
 
-        & li {
+        li {
             @include center('horizontal');
             justify-content: space-between;
 
 
-            & img {
+            img {
                 height: 50px;
             }
 
-            & a {
+            a {
                 color: $secondaryColor;
                 text-decoration: none;
                 padding: 0 10px;
