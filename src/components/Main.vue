@@ -6,7 +6,7 @@ export default {
     },
     data() {
         return {
-            currentSeries: [
+            series: [
                 {
                     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
                     "price": "$19.99",
@@ -88,10 +88,20 @@ export default {
 
 <template>
     <main>
-            <section id="jubmbotron">
-                
-            </section>
-            <CurrentSeries/>
+        <section id="jubmbotron">
+            
+        </section>
+        <div class="container">
+            <h2>
+            CURRENT SERIES
+            </h2>
+            <CurrentSeries v-for="card in series"
+            :thumb="card.thumb"
+            :title="card.series"
+            />
+
+            <button>LOAD MORE</button>
+        </div>
     </main>
 </template>
 
@@ -100,12 +110,39 @@ export default {
 @use '../style/partials/mixin' as *;
 
 main {
+    background-color: #1c1c1c;
+    color: $secondaryColor;
+
     #jubmbotron {
         background-image: url('img/jumbotron.jpg');
         background-size: cover;
         height: 300px;
         width: 100%;
         color: $secondaryColor;
+    }
+
+
+    .container {
+        position: relative;
+        width: 100%;
+        @include center('onlyFlex');
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        h2 {
+            background-color: $primaryColor;
+            padding: 10px 20px;
+            position: absolute;
+            top: -30px;
+        }
+
+        button {
+            background-color: $primaryColor;
+            color: $secondaryColor;
+            border: 0px;
+            padding: 7px 60px;
+            margin: 50px auto 20px;
+        }
     }
 }
 </style>

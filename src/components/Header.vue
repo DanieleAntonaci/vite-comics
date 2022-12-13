@@ -92,6 +92,7 @@ header {
   background-color: $secondaryColor;
   position: sticky;
   top: 0;
+  z-index: 900;
 
 
   .container {
