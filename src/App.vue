@@ -1,46 +1,31 @@
 <script >
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
+    Main,
     Footer
   }
 }
 </script>
 
 <template>
-  <Header/>
-  <main>
-   <div class="container">
-    <h2>
-    -->Content goes here 
 
-    </h2>
-   </div>
-  </main>
+  <Header/>
+
+  <Main/>
+
   <Footer />
+  
 </template>
 
 <style lang="scss">
 @use './style/general.scss' as *;
 @use './style/partials/variables' as *;
 @use './style/partials/mixin' as *;
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-main {
-  background-image: url('img/jumbotron.jpg');
-  background-size: cover;
-  height: 300px;
-  width: 100%;
-  color: $secondaryColor;
-}
 </style>
  
