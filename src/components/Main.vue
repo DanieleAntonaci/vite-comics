@@ -26,7 +26,7 @@ main {
     color: $secondaryColor;
 
     #jubmbotron {
-        background-image: url('img/jumbotron.jpg');
+        background-image: url('/img/jumbotron.jpg');
         background-size: cover;
         height: 300px;
         width: 100%;
